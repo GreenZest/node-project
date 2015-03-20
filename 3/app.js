@@ -82,5 +82,5 @@ app.get('/login', function(req,res){
 app.post('/login', passport.authenticate('local', { successRedirect: '/secret',
                                                   failureRedirect: '/login' }))
 
-var server = app.listen('4000');
-console.log('server is listening on port 4000');
+var server = app.listen(process.env.PORT, process.env.IP);
+// console.log('server is listening on port 4000');
